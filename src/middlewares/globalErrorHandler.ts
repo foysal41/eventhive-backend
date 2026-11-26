@@ -11,7 +11,7 @@ const globalErrorHandler = (error: any, _req: Request, res: Response, _next: Nex
 
     if(error?.code === "23505") {
         statusCode = 409;
-        message= "Email already register";
+        message= "Email already registered";
     }
 
     if(error?.code === "22P02") {
@@ -26,7 +26,7 @@ const globalErrorHandler = (error: any, _req: Request, res: Response, _next: Nex
     res.status(statusCode).json({
         success: false,
         message,
-        ...(errors && {error}),
+        ...(errors && {errors}),
     })
 }
 
