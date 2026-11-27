@@ -1,7 +1,9 @@
+import jwt from "jsonwebtoken";
 import { AppError } from "../../utils/AppError";
 import { AuthInterface } from "./auth.interface";
 import { AuthRepository } from "./auth.repository";
 import bcrypt from "bcrypt";
+import config from "../../config";
 
 
 
@@ -54,7 +56,60 @@ const signup = async(payload: AuthInterface) => {
 }
 
 
+
+const login = async(payload: AuthInterface) => {
+    const {email, password} = payload;
+    
+    const errors  : {field: string; message: string}[] = [];
+
+    if(!email || typeof email !== "string" || !email.includes("@")){
+        errors.push({field: "email" , message: "Valid email is required"})
+    }
+    if(!password || typeof password !== "string" ){
+        errors.push({field: "password" , message: "Password is required"})
+    }
+
+    if (errors.length > 0) {
+    throw new AppError(400, "Validation Error", errors);
+    }
+   
+
+
+    const user = await AuthRepository.findUserByEmail(email.trim());
+  
+    if(!user){
+        throw new AppError(401, "Invalid email")
+    }
+    const isPasswordMatch = await bcrypt.compare(password, user.password)
+    if(!isPasswordMatch){
+        throw new AppError(401, "Invalid password")
+    }
+
+
+
+
+    const jwtPayload = {
+        id: user.id,
+        role: user.role
+    }
+
+    const token = jwt.sign(jwtPayload, config.jwt_secret, {expiresIn: config.jwt_expire_in as any}) 
+    return {
+        token,
+        user: {
+            id: user.id,
+            name: user.name, 
+            email: user.email, 
+            role: user.role,
+        }
+    }
+    
+
+
+}
+
 export const AuthService  = {
-    signup
+    signup,
+    login
 }
 

@@ -9,7 +9,9 @@ dotenv.config({
 
 const config = {
     port:process.env.PORT ? Number(process.env.PORT) : 8000,
-    connectionString: process.env.DATABASE_URL_POOLED as string,
+    connection_string: process.env.DATABASE_URL_POOLED as string,
+    jwt_secret: process.env.JWT_SECRET as string,
+    jwt_expire_in: process.env.JWT_EXPIRES_IN || "7d",
 
 }
 

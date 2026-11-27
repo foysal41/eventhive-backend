@@ -13,7 +13,17 @@ const signup  = async(req: Request, res: Response ) => {
 
 }
 
+const login = async(req: Request, res: Response) => {
+    try{
+        const result = await AuthService.login(req.body)
+        sendResponse(res, {statusCode: 201, success: true, message: "User Login successfully", data: result} )
+    }catch(error: any) {
+        sendResponse(res, {statusCode: 400, success: false, message: error.message})
+    }
+}
+
 
 export const AuthController = {
     signup,
+    login
 }
