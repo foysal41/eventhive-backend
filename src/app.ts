@@ -1,5 +1,6 @@
 import express, { type Request, type Response } from 'express'
 import { AuthRouter } from './modules/auth/auth.route';
+import globalErrorHandler from './middlewares/globalErrorHandler';
 
 const app = express()
 
@@ -17,5 +18,5 @@ app.use("/", async(req:Request, res: Response) => {
     })
 })
 
-
+app.use(globalErrorHandler);
 export default app
