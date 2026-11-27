@@ -1,7 +1,7 @@
 import { Response } from "express";
 
 type TResponse<T> = {
-    statusCode: number,
+    status_code: number,
     success: boolean,
     message: string,
     data?: T,
@@ -9,7 +9,7 @@ type TResponse<T> = {
 }
 
 const sendResponse = <T>(res:Response, payload: TResponse<T>) => {
-    res.status(payload.statusCode).json({
+    res.status(payload.status_code).json({
         success: payload.success,
         message: payload.message,
         data: payload.data !== undefined ? payload.data: null,
