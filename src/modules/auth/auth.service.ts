@@ -36,7 +36,7 @@ const signup = async(payload: AuthInterface) => {
    
 
 
-    const existingUser = await AuthRepository.findUserByEmail(email.trim());
+    const existingUser = await AuthRepository.find_user_by_email(email.trim());
     if(existingUser){
         throw new AppError(409, "Email Already registered")
     }
@@ -75,7 +75,7 @@ const login = async(payload: AuthInterface) => {
    
 
 
-    const user = await AuthRepository.findUserByEmail(email.trim());
+    const user = await AuthRepository.find_user_by_email(email.trim());
   
     if(!user){
         throw new AppError(401, "Invalid email")

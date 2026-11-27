@@ -15,7 +15,7 @@ const createUser = async(payload:AuthInterface )=> {
     return result;
 }
 
-const findUserByEmail = async(email:string) => {
+const find_user_by_email = async(email:string) => {
     const result = await pool.query(`SELECT * FROM users WHERE email = $1` , [email]);
     return result.rows[0] || null;
 }
@@ -24,5 +24,5 @@ const findUserByEmail = async(email:string) => {
 
 export const AuthRepository = {
     createUser,
-    findUserByEmail
+    find_user_by_email
 }
