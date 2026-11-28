@@ -12,6 +12,20 @@ const create_event = async(req:Request, res:Response , next: NextFunction ) => {
     }
 }
 
+
+const get_all_event = async(req: Request, res: Response, next: NextFunction) => {
+    try{
+        const search = req.query.search as string | undefined;
+
+        const result = await event_service.get_single_event_from_db(search);
+        sendResponse(res, {status_code: 200 , success: true, message: "Events retrieved successfully", data: result})
+        
+    }catch(error: any){
+        next(error)
+    }
+}
+
  export const event_controller ={
     create_event,
+    get_all_event
  }
