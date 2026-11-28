@@ -48,3 +48,47 @@
  Method : POST | URL : /api/v1/auth/login | Date: 27/11/2026 | Time: 12:03:10 PM
 
  Method : POST | URL : /api/v1/auth/login | Date: 27/11/2026 | Time: 12:03:27 PM
+
+ Method : GET | URL : /favicon.ico | Date: 27/11/2026 | Time: 7:23:46 PM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:21:53 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:29:05 AM
+
+ Method : POST | URL : /api/v1/auth/signup | Date: 28/11/2026 | Time: 7:30:17 AM
+
+ Method : POST | URL : /api/v1/auth/login | Date: 28/11/2026 | Time: 7:30:37 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:30:45 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:30:46 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:31:01 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:32:11 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:39:23 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:42:14 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:42:48 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:43:12 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:43:34 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:46:38 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:47:07 AM
+
+ Method : POST | URL : /api/v1/auth/login | Date: 28/11/2026 | Time: 7:47:12 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:47:20 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:49:50 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 7:52:37 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 8:01:25 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 8:01:47 AM
