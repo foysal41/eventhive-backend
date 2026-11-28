@@ -1,8 +1,8 @@
 import express, { type Request, type Response } from 'express'
 import { AuthRouter } from './modules/auth/auth.route';
 import globalErrorHandler from './middlewares/globalErrorHandler';
-import fs from "fs"
 import logger from './middlewares/logger.middleware';
+import { event_route } from './modules/events/event.route';
 
 const app = express()
 
@@ -13,6 +13,7 @@ app.use(logger)
 
 
 app.use("/api/v1/auth" , AuthRouter)
+app.use("/api/v1/events", event_route)
 
 
 app.use("/", async(req:Request, res: Response) => {
