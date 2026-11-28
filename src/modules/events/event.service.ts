@@ -99,10 +99,19 @@ const update_event_in_db = async(id: number, organizer_id: number, payload: Part
 }
 
 
+const delete_event_from_db = async(id: number)=> {
+
+    const result = await pool.query(`DELETE FROM events WHERE id = $1`, [id]);
+    return result.rows[0];
+}   
+
+
+
 
 export const event_service = {
     create_event_into_db,
     get_all_event_from_db,
     get_single_event_from_db,
-    update_event_in_db
+    update_event_in_db,
+    delete_event_from_db
 }

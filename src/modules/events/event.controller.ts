@@ -49,9 +49,21 @@ const update_event = async(req:Request, res: Response, next: NextFunction) => {
     }
 }
 
+
+const delete_event = async(req:Request, res: Response, next: NextFunction) => {
+    try{
+        const id = Number(req.params.id);
+        const result = await event_service.delete_event_from_db(id)
+        sendResponse(res, {status_code: 200 , success: true, message: "Event deleted successfully", data: result})
+    }catch(error: any){
+        next(error)
+    }
+}   
+
  export const event_controller ={
     create_event,
     get_all_event,
     get_single_event,
-    update_event
+    update_event,
+    delete_event
  }

@@ -9,5 +9,6 @@ router.post("/" ,auth('organizer'), event_controller.create_event)
 router.get("/" , event_controller.get_all_event)
 router.get("/:id" , event_controller.get_single_event)
 router.put("/:id" , auth("organizer") , event_controller.update_event)
+router.delete("/:id" , auth("organizer") , event_controller.delete_event)
 
 export const event_route = router;
