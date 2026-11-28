@@ -31,7 +31,21 @@ const create_event_into_db = async(payload:i_event ): Promise<i_event>=>{
 }
 
 
+const get_single_event_from_db = async(search?:string) : Promise<i_event[]> => {
+    console.log(search)
+    const result = await pool.query(`
+        SELECT * FROM events 
+        WHERE title ILIKE $1 OR description ILIKE $1 
+        ORDER By created_at DESC;`, 
+        [`%${search || ""}%`]);
+        
+    return result.rows;
+}
+
+
+
 
 export const event_service = {
     create_event_into_db,
+    get_single_event_from_db,
 }
