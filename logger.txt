@@ -140,3 +140,41 @@
  Method : GET | URL : /api/v1/events?search=PostgreSQL | Date: 28/11/2026 | Time: 9:37:08 AM
 
  Method : GET | URL : /favicon.ico | Date: 28/11/2026 | Time: 9:37:08 AM
+
+ Method : GET | URL : /api/v1/events/6 | Date: 28/11/2026 | Time: 10:16:57 AM
+
+ Method : POST | URL : /api/v1/events | Date: 28/11/2026 | Time: 12:29:14 PM
+
+ Method : GET | URL : /api/v1/events?search=PostgreSQL | Date: 28/11/2026 | Time: 12:32:04 PM
+
+ Method : GET | URL : /favicon.ico | Date: 28/11/2026 | Time: 12:32:05 PM
+
+ Method : POST | URL : /api/v1/auth/login | Date: 28/11/2026 | Time: 12:32:55 PM
+
+ Method : POST | URL : /api/v1/auth/login | Date: 28/11/2026 | Time: 12:33:04 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:33:22 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:34:03 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:34:51 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:37:41 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:37:56 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:38:15 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:42:04 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:42:11 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:42:45 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:45:18 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:46:13 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:46:38 PM
+
+ Method : PUT | URL : /api/v1/events/7 | Date: 28/11/2026 | Time: 12:48:26 PM
